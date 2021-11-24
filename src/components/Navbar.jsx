@@ -14,7 +14,7 @@ import { ThemeContext } from '../context/ThemeProvider'
 const Navbar = () => {
 
 
-const {theme,setTheme} = React.useContext(ThemeContext)
+const {theme,cambioColor} = React.useContext(ThemeContext)
 /* const [color,setColor] = useState('#000')
 const [textColor,setTextColor] = useState('')  */
 
@@ -32,12 +32,12 @@ const [textColor,setTextColor] = useState('')  */
             <label>Color Texto</label>
             <input 
             type="color"
-            onChange={e => setTheme({...theme, color: e.target.value})}
+            onChange={e => cambioColor({...theme, color: e.target.value})}
             />
              <label>Color Fondo</label>
              <input 
             type="color"
-            onChange={e => setTheme({...theme, background: e.target.value})}
+            onChange={e => cambioColor({...theme, background: e.target.value})}
             />
         </div>
     )
